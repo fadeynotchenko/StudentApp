@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xc9-UR-g1w">
-    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <device id="retina6_5" orientation="portrait" appearance="dark"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,7 +15,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="Background"/>
@@ -32,26 +33,38 @@
             </objects>
             <point key="canvasLocation" x="1021" y="4"/>
         </scene>
-        <!--Добавить-->
+        <!--Новое Занятие-->
         <scene sceneID="x7Q-fr-qFr">
             <objects>
                 <viewController id="3z9-id-Tyx" customClass="AddNewLessonViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nRg-aN-ZkS">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zd4-Qn-y4T">
-                                <rect key="frame" x="16" y="137" width="361" height="43"/>
+                                <rect key="frame" x="16" y="137" width="382" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="qEh-gn-Iis"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Выбрать">
-                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                <buttonConfiguration key="configuration" style="gray">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Выбрать">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemGray5Color"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="o7p-Mx-PUR" kind="show" identifier="addNewLessonSegue" id="gee-NJ-qFt"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HHr-bo-Smm">
-                                <rect key="frame" x="346.66666666666669" y="150" width="20" height="16.333333333333314"/>
+                                <rect key="frame" x="367.66666666666669" y="150" width="20" height="16.333333333333314"/>
                                 <color key="tintColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="NXz-Sl-BTj"/>
@@ -60,7 +73,44 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название предмета:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxN-nw-AHZ">
-                                <rect key="frame" x="16" y="108" width="164" height="21"/>
+                                <rect key="frame" x="16" y="108" width="163.66666666666666" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVJ-KA-D9R">
+                                <rect key="frame" x="16" y="227" width="382" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="7JR-C2-JYL"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Выбрать">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemGray5Color"/>
+                                </buttonConfiguration>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hwt-5k-cRS">
+                                <rect key="frame" x="367" y="240" width="20" height="16.333333333333314"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="XEm-QA-nMv"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="cE5-vy-d3j"/>
+                                    <constraint firstAttribute="height" constant="20" id="vZv-eZ-BFl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Аудитория:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnb-Ew-gJ9">
+                                <rect key="frame" x="16" y="198" width="89.666666666666671" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="PoD-oL-kh0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
@@ -70,27 +120,89 @@
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="RxN-nw-AHZ" firstAttribute="leading" secondItem="56a-ad-BWx" secondAttribute="leading" constant="16" id="1S2-qI-VcY"/>
-                            <constraint firstItem="56a-ad-BWx" firstAttribute="trailing" secondItem="RxN-nw-AHZ" secondAttribute="trailing" constant="213" id="G5N-08-veG"/>
+                            <constraint firstItem="56a-ad-BWx" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dnb-Ew-gJ9" secondAttribute="trailing" symbolic="YES" id="1bE-hX-ud8"/>
+                            <constraint firstItem="GVJ-KA-D9R" firstAttribute="top" secondItem="dnb-Ew-gJ9" secondAttribute="bottom" constant="8" symbolic="YES" id="3PZ-1M-LI3"/>
+                            <constraint firstItem="56a-ad-BWx" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="RxN-nw-AHZ" secondAttribute="trailing" constant="250.33333333333334" id="Kjw-KA-Law"/>
+                            <constraint firstItem="GVJ-KA-D9R" firstAttribute="leading" secondItem="56a-ad-BWx" secondAttribute="leading" constant="16" id="LDf-Sd-1A6"/>
                             <constraint firstItem="RxN-nw-AHZ" firstAttribute="top" secondItem="56a-ad-BWx" secondAttribute="top" id="NTk-p9-s0h"/>
+                            <constraint firstItem="dnb-Ew-gJ9" firstAttribute="leading" secondItem="56a-ad-BWx" secondAttribute="leading" constant="16" id="Ncp-Wx-MD8"/>
                             <constraint firstItem="zd4-Qn-y4T" firstAttribute="leading" secondItem="56a-ad-BWx" secondAttribute="leading" constant="16" id="TeD-YA-ruu"/>
+                            <constraint firstItem="hwt-5k-cRS" firstAttribute="top" secondItem="zd4-Qn-y4T" secondAttribute="bottom" constant="58" id="UIF-sC-VSK"/>
+                            <constraint firstItem="56a-ad-BWx" firstAttribute="trailing" secondItem="hwt-5k-cRS" secondAttribute="trailing" constant="27" id="X0t-fC-0Qq"/>
                             <constraint firstItem="HHr-bo-Smm" firstAttribute="top" secondItem="56a-ad-BWx" secondAttribute="top" constant="40" id="XAX-u5-vd0"/>
                             <constraint firstItem="56a-ad-BWx" firstAttribute="trailing" secondItem="zd4-Qn-y4T" secondAttribute="trailing" constant="16" id="ZfL-P5-7ow"/>
                             <constraint firstItem="zd4-Qn-y4T" firstAttribute="top" secondItem="RxN-nw-AHZ" secondAttribute="bottom" constant="8" symbolic="YES" id="ebQ-7x-dlg"/>
+                            <constraint firstItem="56a-ad-BWx" firstAttribute="trailing" secondItem="GVJ-KA-D9R" secondAttribute="trailing" constant="16" id="fz1-LN-Hxh"/>
+                            <constraint firstItem="GVJ-KA-D9R" firstAttribute="top" secondItem="dnb-Ew-gJ9" secondAttribute="bottom" constant="8" symbolic="YES" id="gsi-zh-X4c"/>
                             <constraint firstItem="56a-ad-BWx" firstAttribute="trailing" secondItem="HHr-bo-Smm" secondAttribute="trailing" constant="26.329999999999998" id="jsl-Ul-OjK"/>
+                            <constraint firstItem="dnb-Ew-gJ9" firstAttribute="top" secondItem="zd4-Qn-y4T" secondAttribute="bottom" constant="18" id="kkN-Vd-lAb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Добавить" id="Tqu-wV-hzW">
-                        <barButtonItem key="leftBarButtonItem" title="Close" id="b2c-sP-yhO">
+                    <navigationItem key="navigationItem" title="Новое Занятие" id="Tqu-wV-hzW">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="Ajx-S4-psL"/>
+                        <barButtonItem key="leftBarButtonItem" title="Закрыть" id="b2c-sP-yhO">
                             <color key="tintColor" name="AccentColor"/>
                             <connections>
                                 <action selector="dismissView:" destination="3z9-id-Tyx" id="uqu-E9-jSx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="selectLessonNameButton" destination="zd4-Qn-y4T" id="MHk-2E-jza"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MdO-9Q-JzC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2846.5648854961833" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="2846.376811594203" y="3.3482142857142856"/>
+        </scene>
+        <!--Предмет-->
+        <scene sceneID="Ff0-qM-KI3">
+            <objects>
+                <viewController storyboardIdentifier="SelectLessonNameViewController" id="o7p-Mx-PUR" customClass="SelectLessonNameViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cf6-bK-KL3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fir-7C-IYd">
+                                <rect key="frame" x="0.0" y="108" width="414" height="778"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Og0-75-lgD">
+                                        <rect key="frame" x="20" y="38" width="374" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Og0-75-lgD" id="BSi-mo-99p">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="N4x-Oq-4lg"/>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstItem="fir-7C-IYd" firstAttribute="trailing" secondItem="N4x-Oq-4lg" secondAttribute="trailing" id="ZGf-zn-7XA"/>
+                            <constraint firstItem="fir-7C-IYd" firstAttribute="leading" secondItem="N4x-Oq-4lg" secondAttribute="leading" id="grf-C0-fxF"/>
+                            <constraint firstItem="fir-7C-IYd" firstAttribute="top" secondItem="N4x-Oq-4lg" secondAttribute="top" id="yXX-Ca-ldo"/>
+                            <constraint firstItem="fir-7C-IYd" firstAttribute="bottom" secondItem="N4x-Oq-4lg" secondAttribute="bottom" id="z2X-fI-WZv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Предмет" id="2Rd-iB-INh">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="keP-cX-NwI">
+                            <color key="tintColor" name="AccentColor"/>
+                            <connections>
+                                <action selector="addNewLesson:" destination="o7p-Mx-PUR" id="4CU-vJ-xXJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="fir-7C-IYd" id="PdT-GJ-0hJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OW1-Sv-2cd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3730.434782608696" y="3.3482142857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="grX-Ow-Qb7">
@@ -98,7 +210,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xc9-UR-g1w" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="UZC-0D-E6j">
-                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -116,7 +228,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eId-OJ-AoY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="LlU-ax-jeE">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="108"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -133,11 +245,20 @@
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
-            <color red="0.99186879396438599" green="0.67450982329999998" blue="0.46274507050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Background">
-            <color red="1" green="0.99607843159999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="1" green="0.99599999189376831" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

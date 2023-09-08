@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43186A482AAB08AE005DB413 /* SelectLessonNameDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43186A472AAB08AE005DB413 /* SelectLessonNameDelegate.swift */; };
+		43186A4C2AAB24D1005DB413 /* Models.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43186A4A2AAB24D1005DB413 /* Models.xcdatamodeld */; };
+		43186A4E2AAB2580005DB413 /* Persistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43186A4D2AAB2580005DB413 /* Persistent.swift */; };
 		43A4C6BE2AAA598600742BEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A4C6BD2AAA598600742BEA /* AppDelegate.swift */; };
 		43A4C6C02AAA598600742BEA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A4C6BF2AAA598600742BEA /* SceneDelegate.swift */; };
 		43A4C6C22AAA598600742BEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A4C6C12AAA598600742BEA /* ViewController.swift */; };
@@ -15,9 +18,13 @@
 		43A4C6CA2AAA598700742BEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43A4C6C82AAA598700742BEA /* LaunchScreen.storyboard */; };
 		43A4C6D82AAA59FE00742BEA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A4C6D72AAA59FE00742BEA /* UIColor.swift */; };
 		43A4C6DA2AAA5E4100742BEA /* AddNewLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A4C6D92AAA5E4100742BEA /* AddNewLessonViewController.swift */; };
+		43A4C6DC2AAA662500742BEA /* SelectLessonNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A4C6DB2AAA662500742BEA /* SelectLessonNameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43186A472AAB08AE005DB413 /* SelectLessonNameDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLessonNameDelegate.swift; sourceTree = "<group>"; };
+		43186A4B2AAB24D1005DB413 /* Models.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Models.xcdatamodel; sourceTree = "<group>"; };
+		43186A4D2AAB2580005DB413 /* Persistent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistent.swift; sourceTree = "<group>"; };
 		43A4C6BA2AAA598600742BEA /* StudentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A4C6BD2AAA598600742BEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43A4C6BF2AAA598600742BEA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +35,7 @@
 		43A4C6CB2AAA598700742BEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43A4C6D72AAA59FE00742BEA /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		43A4C6D92AAA5E4100742BEA /* AddNewLessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewLessonViewController.swift; sourceTree = "<group>"; };
+		43A4C6DB2AAA662500742BEA /* SelectLessonNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLessonNameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +49,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43186A462AAB089B005DB413 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				43186A472AAB08AE005DB413 /* SelectLessonNameDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		43186A492AAB24B3005DB413 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				43186A4A2AAB24D1005DB413 /* Models.xcdatamodeld */,
+				43186A4D2AAB2580005DB413 /* Persistent.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
 		43A4C6B12AAA598600742BEA = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +87,8 @@
 			children = (
 				43A4C6BD2AAA598600742BEA /* AppDelegate.swift */,
 				43A4C6BF2AAA598600742BEA /* SceneDelegate.swift */,
+				43186A492AAB24B3005DB413 /* Core Data */,
+				43186A462AAB089B005DB413 /* Protocols */,
 				43A4C6D52AAA59E200742BEA /* Extensions */,
 				43A4C6D12AAA59C200742BEA /* UI */,
 				43A4C6C62AAA598700742BEA /* Assets.xcassets */,
@@ -85,6 +112,7 @@
 			children = (
 				43A4C6C12AAA598600742BEA /* ViewController.swift */,
 				43A4C6D92AAA5E4100742BEA /* AddNewLessonViewController.swift */,
+				43A4C6DB2AAA662500742BEA /* SelectLessonNameViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -171,8 +199,12 @@
 				43A4C6DA2AAA5E4100742BEA /* AddNewLessonViewController.swift in Sources */,
 				43A4C6C22AAA598600742BEA /* ViewController.swift in Sources */,
 				43A4C6D82AAA59FE00742BEA /* UIColor.swift in Sources */,
+				43A4C6DC2AAA662500742BEA /* SelectLessonNameViewController.swift in Sources */,
 				43A4C6BE2AAA598600742BEA /* AppDelegate.swift in Sources */,
+				43186A4C2AAB24D1005DB413 /* Models.xcdatamodeld in Sources */,
+				43186A4E2AAB2580005DB413 /* Persistent.swift in Sources */,
 				43A4C6C02AAA598600742BEA /* SceneDelegate.swift in Sources */,
+				43186A482AAB08AE005DB413 /* SelectLessonNameDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,9 +349,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CQ3SGH4DSY;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StudentApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -327,6 +360,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,6 +368,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = VN.StudentApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -345,9 +380,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CQ3SGH4DSY;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StudentApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -355,6 +391,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -362,6 +399,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = VN.StudentApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -390,6 +428,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		43186A4A2AAB24D1005DB413 /* Models.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				43186A4B2AAB24D1005DB413 /* Models.xcdatamodel */,
+			);
+			currentVersion = 43186A4B2AAB24D1005DB413 /* Models.xcdatamodel */;
+			path = Models.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 43A4C6B22AAA598600742BEA /* Project object */;
 }
