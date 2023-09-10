@@ -33,7 +33,7 @@ class LessonTeacherViewController: UITableViewController {
             let textField = alert.textFields![0] as UITextField
             
             if let text = textField.text {
-                //Add new LessonName Entity
+                //Add new LessonTeacher Entity
                 let lessonTeacherEntity = LessonTeacher(context: PersistenceController.shared.context)
                 lessonTeacherEntity.name = text
                 
@@ -79,7 +79,7 @@ extension LessonTeacherViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let lessonTeacherEntity = self.teachers?[indexPath.row]
         
-        self.delegate?.updateLessonName(lessonTeacherEntity: lessonTeacherEntity)
+        self.delegate?.updateLessonTeacher(lessonTeacherEntity: lessonTeacherEntity)
         
         self.navigationController?.popViewController(animated: true)
     }
@@ -90,7 +90,7 @@ extension LessonTeacherViewController {
             let entity = self.teachers![indexPath.row]
             
             if entity == self.currentTeacher {
-                self.delegate?.updateLessonName(lessonTeacherEntity: nil)
+                self.delegate?.updateLessonTeacher(lessonTeacherEntity: nil)
             }
             
             //update UI

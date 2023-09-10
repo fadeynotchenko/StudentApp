@@ -11,9 +11,11 @@ class NewLessonViewController: UITableViewController {
     
     private var lessonNameEntity: LessonName?
     private var lessonTeacherEntity: LessonTeacher?
+    private var lessonAudienceEntity: LessonAudience?
 
     @IBOutlet weak var lessonNameCell: UITableViewCell!
     @IBOutlet weak var lessonTeacherCell: UITableViewCell!
+    @IBOutlet weak var lessonAudienceCell: UITableViewCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,11 @@ class NewLessonViewController: UITableViewController {
         if let vc = segue.destination as? LessonTeacherViewController, segue.identifier == "selectLessonTeacherSegue" {
             vc.delegate = self
             vc.currentTeacher = self.lessonTeacherEntity
+        }
+        
+        if let vc = segue.destination as? LessonAudienceViewController, segue.identifier == "selectLessonAudienceSegue" {
+            vc.delegate = self
+            vc.currentAudience = self.lessonAudienceEntity
         }
     }
     
@@ -57,7 +64,7 @@ extension NewLessonViewController: LessonNameDelegate {
 
 //MARK: Lesson Teacher Delegate
 extension NewLessonViewController: LessonTeacherDelegate {
-    func updateLessonName(lessonTeacherEntity: LessonTeacher?) {
+    func updateLessonTeacher(lessonTeacherEntity: LessonTeacher?) {
         self.lessonTeacherEntity = lessonTeacherEntity
         
         guard let lessonTeacherEntity = lessonTeacherEntity else {
@@ -67,5 +74,20 @@ extension NewLessonViewController: LessonTeacherDelegate {
         }
         
         self.lessonTeacherCell.textLabel?.text = lessonTeacherEntity.name
+    }
+}
+
+//MARK: Lesson Audience Delegate
+extension NewLessonViewController: LessonAudienceDelegate {
+    func updateLessonAudience(lessonAudienceEntity: LessonAudience?) {
+        self.lessonAudienceEntity = lessonAudienceEntity
+        
+        guard let entity = lessonAudienceEntity else {
+            self.lessonAudienceCell.textLabel?.text = "Аудитория"
+            
+            return
+        }
+        
+        self.lessonAudienceCell.textLabel?.text = "№ \(entity.number), этаж: \(entity.floor)"
     }
 }

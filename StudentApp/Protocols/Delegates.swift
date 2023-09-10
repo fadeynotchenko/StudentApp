@@ -12,5 +12,9 @@ protocol LessonNameDelegate: AnyObject {
 }
 
 protocol LessonTeacherDelegate: AnyObject {
-    func updateLessonName(lessonTeacherEntity: LessonTeacher?)
+    func updateLessonTeacher(lessonTeacherEntity: LessonTeacher?)
+}
+
+protocol LessonAudienceDelegate: AnyObject {
+    func updateLessonAudience(lessonAudienceEntity: LessonAudience?)
 }

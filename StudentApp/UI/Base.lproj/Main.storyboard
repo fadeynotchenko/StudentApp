@@ -124,7 +124,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <connections>
-                                            <segue destination="Vjl-qt-hR5" kind="show" id="mFp-yp-gbP"/>
+                                            <segue destination="Vjl-qt-hR5" kind="show" identifier="selectLessonAudienceSegue" id="mFp-yp-gbP"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -145,6 +145,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="lessonAudienceCell" destination="WOD-1G-hTm" id="toZ-vr-2Kp"/>
                         <outlet property="lessonNameCell" destination="Ox2-uj-Wit" id="5wB-YT-evO"/>
                         <outlet property="lessonTeacherCell" destination="jEd-o0-mOQ" id="sg8-so-vgV"/>
                     </connections>
@@ -244,7 +245,7 @@
         <!--Аудитория-->
         <scene sceneID="vBo-eb-bgR">
             <objects>
-                <tableViewController id="Vjl-qt-hR5" sceneMemberID="viewController">
+                <tableViewController id="Vjl-qt-hR5" customClass="LessonAudienceViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="wqS-f0-ifI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -257,6 +258,9 @@
                     <navigationItem key="navigationItem" title="Аудитория" id="zxo-4Z-8mO">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="PCu-SS-50d">
                             <color key="tintColor" name="AccentColor"/>
+                            <connections>
+                                <action selector="addAudience:" destination="Vjl-qt-hR5" id="WMf-9n-YwU"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
