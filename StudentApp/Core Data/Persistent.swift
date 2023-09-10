@@ -15,18 +15,19 @@ struct PersistenceController {
     var context: NSManagedObjectContext { self.container.viewContext }
 
     init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "Models")
+        self.container = NSPersistentContainer(name: "Models")
         
         if inMemory {
-            container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
+            self.container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+        
+        self.container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
         
-        container.viewContext.automaticallyMergesChangesFromParent = true
+        self.container.viewContext.automaticallyMergesChangesFromParent = true
     }
     
     func saveContext () {
@@ -42,17 +43,21 @@ struct PersistenceController {
         }
     }
     
-    func getLessonNameEntityArray() -> [LessonName]? {
+    func fetchObjects<T: NSManagedObject>(entityName: String, predicate: NSPredicate? = nil, sortDescriptors: [NSSortDescriptor]? = nil) -> [T]? {
+        let fetchRequest = NSFetchRequest<T>(entityName: entityName)
+        fetchRequest.predicate = predicate
+        fetchRequest.sortDescriptors = sortDescriptors
+
         do {
-            let fetchRequest: NSFetchRequest<LessonName> = LessonName.fetchRequest()
-            let objects = try PersistenceController.shared.context.fetch(fetchRequest)
+            let results = try context.fetch(fetchRequest)
             
-            return objects
+            return results
         } catch {
-            print(error.localizedDescription)
+            print("Fetch error: \(error.localizedDescription)")
+            
+            return nil
         }
-        
-        return nil
     }
+
 }
 
