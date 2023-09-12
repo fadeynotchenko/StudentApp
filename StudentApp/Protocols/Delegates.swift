@@ -19,6 +19,10 @@ protocol LessonAudienceDelegate: AnyObject {
     func updateLessonAudience(lessonAudienceEntity: LessonAudience?)
 }
 
-protocol LessonDateDelegate: AnyObject {
-    func updateLessonDate(lessonDateEntity: LessonDate?)
+protocol LessonTimeDelegate: AnyObject {
+    func updateLessonTime(lessonTimeEntity: LessonTime?)
+}
+
+protocol AddLessonTimeDelegate: AnyObject {
+    func add(new lessonTimeEntity: LessonTime)
 }

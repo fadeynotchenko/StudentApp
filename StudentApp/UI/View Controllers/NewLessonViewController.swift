@@ -12,10 +12,12 @@ class NewLessonViewController: UITableViewController {
     private var lessonNameEntity: LessonName?
     private var lessonTeacherEntity: LessonTeacher?
     private var lessonAudienceEntity: LessonAudience?
+    private var lessonTimeEntity: LessonTime?
 
     @IBOutlet weak var lessonNameCell: UITableViewCell!
     @IBOutlet weak var lessonTeacherCell: UITableViewCell!
     @IBOutlet weak var lessonAudienceCell: UITableViewCell!
+    @IBOutlet weak var lessonTimeCell: UITableViewCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,19 +28,24 @@ class NewLessonViewController: UITableViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? LessonNameViewController, segue.identifier == "selectLessonNameSegue" {
+        if let vc = segue.destination as? LessonNameViewController, segue.identifier == SegueIdentifiers.LESSON_NAME {
             vc.delegate = self
             vc.currentLessonNameEntity = self.lessonNameEntity
         }
         
-        if let vc = segue.destination as? LessonTeacherViewController, segue.identifier == "selectLessonTeacherSegue" {
+        if let vc = segue.destination as? LessonTeacherViewController, segue.identifier == SegueIdentifiers.LESSON_TEACHER {
             vc.delegate = self
             vc.currentTeacher = self.lessonTeacherEntity
         }
         
-        if let vc = segue.destination as? LessonAudienceViewController, segue.identifier == "selectLessonAudienceSegue" {
+        if let vc = segue.destination as? LessonAudienceViewController, segue.identifier == SegueIdentifiers.LESSON_AUDIENCE {
             vc.delegate = self
             vc.currentAudience = self.lessonAudienceEntity
+        }
+        
+        if let vc = segue.destination as? LessonTimeViewController, segue.identifier == SegueIdentifiers.LESSON_TIME {
+            vc.delegate = self
+            vc.currentLessonTime = self.lessonTimeEntity
         }
     }
     
@@ -95,5 +102,20 @@ extension NewLessonViewController: LessonAudienceDelegate {
         }
             
         self.lessonAudienceCell.textLabel?.text = text
+    }
+}
+
+//MARK: Lesson Time Delegate
+extension NewLessonViewController: LessonTimeDelegate {
+    func updateLessonTime(lessonTimeEntity: LessonTime?) {
+        self.lessonTimeEntity = lessonTimeEntity
+        
+        guard let lessonTimeEntity = lessonTimeEntity else {
+            self.lessonTimeCell.textLabel?.text = "Время"
+            
+            return
+        }
+        
+        self.lessonTimeCell.textLabel?.text = "\(lessonTimeEntity.start!.stringTime()) - \(lessonTimeEntity.end!.stringTime())"
     }
 }

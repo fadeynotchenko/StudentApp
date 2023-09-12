@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		43158D332AB059800020A5B4 /* LessonDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43158D322AB059800020A5B4 /* LessonDateViewController.swift */; };
-		43158D352AB05E6D0020A5B4 /* AddNewLessonDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43158D342AB05E6D0020A5B4 /* AddNewLessonDateViewController.swift */; };
+		43158D332AB059800020A5B4 /* LessonTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43158D322AB059800020A5B4 /* LessonTimeViewController.swift */; };
+		43158D352AB05E6D0020A5B4 /* AddNewLessonTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43158D342AB05E6D0020A5B4 /* AddNewLessonTimeViewController.swift */; };
+		43158D372AB0713D0020A5B4 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43158D362AB0713D0020A5B4 /* Date.swift */; };
+		43158D3A2AB0751B0020A5B4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43158D392AB0751B0020A5B4 /* Constants.swift */; };
 		43186A482AAB08AE005DB413 /* Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43186A472AAB08AE005DB413 /* Delegates.swift */; };
 		43186A4C2AAB24D1005DB413 /* Models.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43186A4A2AAB24D1005DB413 /* Models.xcdatamodeld */; };
 		43186A4E2AAB2580005DB413 /* Persistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43186A4D2AAB2580005DB413 /* Persistent.swift */; };
@@ -26,8 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		43158D322AB059800020A5B4 /* LessonDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDateViewController.swift; sourceTree = "<group>"; };
-		43158D342AB05E6D0020A5B4 /* AddNewLessonDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewLessonDateViewController.swift; sourceTree = "<group>"; };
+		43158D322AB059800020A5B4 /* LessonTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTimeViewController.swift; sourceTree = "<group>"; };
+		43158D342AB05E6D0020A5B4 /* AddNewLessonTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewLessonTimeViewController.swift; sourceTree = "<group>"; };
+		43158D362AB0713D0020A5B4 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		43158D392AB0751B0020A5B4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		43186A472AAB08AE005DB413 /* Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegates.swift; sourceTree = "<group>"; };
 		43186A4B2AAB24D1005DB413 /* Models.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Models.xcdatamodel; sourceTree = "<group>"; };
 		43186A4D2AAB2580005DB413 /* Persistent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistent.swift; sourceTree = "<group>"; };
@@ -57,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43158D382AB0750B0020A5B4 /* Utills */ = {
+			isa = PBXGroup;
+			children = (
+				43158D392AB0751B0020A5B4 /* Constants.swift */,
+			);
+			path = Utills;
+			sourceTree = "<group>";
+		};
 		43186A462AAB089B005DB413 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +107,7 @@
 			children = (
 				43A4C6BD2AAA598600742BEA /* AppDelegate.swift */,
 				43A4C6BF2AAA598600742BEA /* SceneDelegate.swift */,
+				43158D382AB0750B0020A5B4 /* Utills */,
 				43186A492AAB24B3005DB413 /* Core Data */,
 				43186A462AAB089B005DB413 /* Protocols */,
 				43A4C6D52AAA59E200742BEA /* Extensions */,
@@ -123,8 +136,8 @@
 				436F5AF92AAB979300060B8B /* LessonNameViewController.swift */,
 				43A193E82AAC917100B30CDB /* LessonTeacherViewController.swift */,
 				43A193EA2AAE377F00B30CDB /* LessonAudienceViewController.swift */,
-				43158D322AB059800020A5B4 /* LessonDateViewController.swift */,
-				43158D342AB05E6D0020A5B4 /* AddNewLessonDateViewController.swift */,
+				43158D322AB059800020A5B4 /* LessonTimeViewController.swift */,
+				43158D342AB05E6D0020A5B4 /* AddNewLessonTimeViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -133,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				43A4C6D72AAA59FE00742BEA /* UIColor.swift */,
+				43158D362AB0713D0020A5B4 /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -208,15 +222,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43158D3A2AB0751B0020A5B4 /* Constants.swift in Sources */,
 				436F5AF82AAB699900060B8B /* NewLessonViewController.swift in Sources */,
 				43A4C6C22AAA598600742BEA /* ViewController.swift in Sources */,
-				43158D332AB059800020A5B4 /* LessonDateViewController.swift in Sources */,
+				43158D332AB059800020A5B4 /* LessonTimeViewController.swift in Sources */,
 				43A4C6D82AAA59FE00742BEA /* UIColor.swift in Sources */,
 				43A193EB2AAE377F00B30CDB /* LessonAudienceViewController.swift in Sources */,
 				43A4C6BE2AAA598600742BEA /* AppDelegate.swift in Sources */,
 				43186A4C2AAB24D1005DB413 /* Models.xcdatamodeld in Sources */,
-				43158D352AB05E6D0020A5B4 /* AddNewLessonDateViewController.swift in Sources */,
+				43158D352AB05E6D0020A5B4 /* AddNewLessonTimeViewController.swift in Sources */,
 				43186A4E2AAB2580005DB413 /* Persistent.swift in Sources */,
+				43158D372AB0713D0020A5B4 /* Date.swift in Sources */,
 				436F5AFA2AAB979300060B8B /* LessonNameViewController.swift in Sources */,
 				43A4C6C02AAA598600742BEA /* SceneDelegate.swift in Sources */,
 				43A193E92AAC917100B30CDB /* LessonTeacherViewController.swift in Sources */,

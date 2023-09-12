@@ -138,24 +138,24 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343.5" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Начало и конец" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AyH-av-t5D">
-                                                    <rect key="frame" x="60.25" y="0.0" width="275.25" height="50"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Время" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AyH-av-t5D">
+                                                    <rect key="frame" x="60" y="0.0" width="275.5" height="50"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n1h-iH-Yd1">
-                                                    <rect key="frame" x="18.75" y="13" width="26.5" height="24"/>
+                                                    <rect key="frame" x="19" y="12" width="26" height="26"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <imageReference key="image" image="calendar" catalog="system" symbolScale="large"/>
+                                                    <imageReference key="image" image="clock" catalog="system" symbolScale="large"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <connections>
-                                            <segue destination="lvF-PB-XZy" kind="show" trigger="accessoryAction" id="2oV-zn-PFp"/>
+                                            <segue destination="lvF-PB-XZy" kind="show" identifier="selectLessonTimeSegue" id="lkR-0h-Pkm"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -179,16 +179,17 @@
                         <outlet property="lessonAudienceCell" destination="WOD-1G-hTm" id="toZ-vr-2Kp"/>
                         <outlet property="lessonNameCell" destination="Ox2-uj-Wit" id="5wB-YT-evO"/>
                         <outlet property="lessonTeacherCell" destination="jEd-o0-mOQ" id="sg8-so-vgV"/>
+                        <outlet property="lessonTimeCell" destination="qGj-Q2-Y4v" id="zAQ-Pa-osc"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="McV-np-ijD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2824.6376811594205" y="2.0089285714285712"/>
         </scene>
-        <!--Дата и Время-->
+        <!--Время Занятия-->
         <scene sceneID="Vea-An-jeu">
             <objects>
-                <tableViewController id="lvF-PB-XZy" customClass="LessonDateViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="lvF-PB-XZy" customClass="LessonTimeViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="X9C-7G-lsr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -198,12 +199,12 @@
                             <outlet property="delegate" destination="lvF-PB-XZy" id="HSg-1Y-lg5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Дата и Время" id="XZn-9V-Dx3">
+                    <navigationItem key="navigationItem" title="Время Занятия" largeTitleDisplayMode="always" id="XZn-9V-Dx3">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8hu-Z6-7r1">
                             <color key="tintColor" name="AccentColor"/>
                             <connections>
                                 <action selector="addDate:" destination="lvF-PB-XZy" id="JPf-BF-53F"/>
-                                <segue destination="8Dh-ke-pI1" kind="show" identifier="addNewLessonDateSegue" id="BMp-Sy-R3V"/>
+                                <segue destination="8Dh-ke-pI1" kind="show" identifier="addLessonTimeSegue" id="5vM-hc-HsQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -212,10 +213,10 @@
             </objects>
             <point key="canvasLocation" x="3699" y="396"/>
         </scene>
-        <!--Новая Дата-->
+        <!--Новое Время-->
         <scene sceneID="d1j-QZ-Fpd">
             <objects>
-                <tableViewController id="8Dh-ke-pI1" customClass="AddNewLessonDateViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="8Dh-ke-pI1" customClass="AddNewLessonTimeViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="B7J-ni-ezH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,18 +225,18 @@
                             <tableViewSection id="lsu-u4-0fJ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hkH-fV-aKc">
-                                        <rect key="frame" x="20" y="18" width="374" height="44"/>
+                                        <rect key="frame" x="20" y="18" width="374" height="44.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hkH-fV-aKc" id="zMN-vO-yDu">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="QmQ-V9-XR2">
-                                                    <rect key="frame" x="83" y="0.0" width="291" height="44"/>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="QmQ-V9-XR2">
+                                                    <rect key="frame" x="82.5" y="0.0" width="291.5" height="44.5"/>
                                                     <color key="tintColor" name="AccentColor"/>
                                                 </datePicker>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Начало" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYA-Lk-P5M">
-                                                    <rect key="frame" x="20" y="11" width="62.5" height="22"/>
+                                                    <rect key="frame" x="20" y="11" width="62.5" height="22.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -252,16 +253,33 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection id="4AP-CV-ra3">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="0dP-Iy-mGd">
-                                        <rect key="frame" x="20" y="98" width="374" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="klE-Az-bON">
+                                        <rect key="frame" x="20" y="62.5" width="374" height="44.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0dP-Iy-mGd" id="fF5-Xj-bF8">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="klE-Az-bON" id="laM-bL-kBL">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="0e9-pB-7Kj">
+                                                    <rect key="frame" x="72.5" y="0.0" width="301.5" height="44.5"/>
+                                                    <color key="tintColor" name="AccentColor"/>
+                                                </datePicker>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Конец" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAH-2m-UAO">
+                                                    <rect key="frame" x="20" y="11" width="52.5" height="22.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0e9-pB-7Kj" firstAttribute="leading" secondItem="SAH-2m-UAO" secondAttribute="trailing" id="FgX-8h-Ew4"/>
+                                                <constraint firstItem="SAH-2m-UAO" firstAttribute="leading" secondItem="laM-bL-kBL" secondAttribute="leadingMargin" id="Iz1-QV-zgO"/>
+                                                <constraint firstItem="SAH-2m-UAO" firstAttribute="centerY" secondItem="laM-bL-kBL" secondAttribute="centerY" id="WoL-oN-rnt"/>
+                                                <constraint firstAttribute="trailing" secondItem="0e9-pB-7Kj" secondAttribute="trailing" id="Wwg-Nq-mi5"/>
+                                                <constraint firstItem="0e9-pB-7Kj" firstAttribute="top" secondItem="laM-bL-kBL" secondAttribute="top" id="c8U-Am-S9k"/>
+                                                <constraint firstItem="SAH-2m-UAO" firstAttribute="top" secondItem="laM-bL-kBL" secondAttribute="topMargin" id="etC-Ad-OOM"/>
+                                                <constraint firstAttribute="bottom" secondItem="0e9-pB-7Kj" secondAttribute="bottom" id="zVJ-Dp-gY0"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -272,11 +290,18 @@
                             <outlet property="delegate" destination="8Dh-ke-pI1" id="Tm1-hj-0Dw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Новая Дата" id="b8I-tW-FMT">
+                    <navigationItem key="navigationItem" title="Новое Время" id="b8I-tW-FMT">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="OcZ-7f-9Y3">
                             <color key="tintColor" name="AccentColor"/>
+                            <connections>
+                                <action selector="saveNewTime:" destination="8Dh-ke-pI1" id="kUd-M5-Z7Y"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="endDatePicker" destination="0e9-pB-7Kj" id="X62-zP-9og"/>
+                        <outlet property="startDatePicker" destination="QmQ-V9-XR2" id="ZTo-LN-ArT"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFg-Eh-FD9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -398,7 +423,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="calendar" catalog="system" width="128" height="107"/>
+        <image name="clock" catalog="system" width="128" height="123"/>
         <image name="door.left.hand.open" catalog="system" width="108" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus" catalog="system" width="128" height="113"/>

@@ -5,14 +5,14 @@
         <attribute name="frame" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="number" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
-    <entity name="LessonDate" representedClassName="LessonDate" syncable="YES" codeGenerationType="class">
-        <attribute name="end" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="start" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-    </entity>
     <entity name="LessonName" representedClassName="LessonName" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <entity name="LessonTeacher" representedClassName="LessonTeacher" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="LessonTime" representedClassName="LessonTime" syncable="YES" codeGenerationType="class">
+        <attribute name="end" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="start" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
 </model>
