@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43158D332AB059800020A5B4 /* LessonDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43158D322AB059800020A5B4 /* LessonDateViewController.swift */; };
+		43158D352AB05E6D0020A5B4 /* AddNewLessonDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43158D342AB05E6D0020A5B4 /* AddNewLessonDateViewController.swift */; };
 		43186A482AAB08AE005DB413 /* Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43186A472AAB08AE005DB413 /* Delegates.swift */; };
 		43186A4C2AAB24D1005DB413 /* Models.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43186A4A2AAB24D1005DB413 /* Models.xcdatamodeld */; };
 		43186A4E2AAB2580005DB413 /* Persistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43186A4D2AAB2580005DB413 /* Persistent.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43158D322AB059800020A5B4 /* LessonDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDateViewController.swift; sourceTree = "<group>"; };
+		43158D342AB05E6D0020A5B4 /* AddNewLessonDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewLessonDateViewController.swift; sourceTree = "<group>"; };
 		43186A472AAB08AE005DB413 /* Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegates.swift; sourceTree = "<group>"; };
 		43186A4B2AAB24D1005DB413 /* Models.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Models.xcdatamodel; sourceTree = "<group>"; };
 		43186A4D2AAB2580005DB413 /* Persistent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistent.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				436F5AF92AAB979300060B8B /* LessonNameViewController.swift */,
 				43A193E82AAC917100B30CDB /* LessonTeacherViewController.swift */,
 				43A193EA2AAE377F00B30CDB /* LessonAudienceViewController.swift */,
+				43158D322AB059800020A5B4 /* LessonDateViewController.swift */,
+				43158D342AB05E6D0020A5B4 /* AddNewLessonDateViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -204,10 +210,12 @@
 			files = (
 				436F5AF82AAB699900060B8B /* NewLessonViewController.swift in Sources */,
 				43A4C6C22AAA598600742BEA /* ViewController.swift in Sources */,
+				43158D332AB059800020A5B4 /* LessonDateViewController.swift in Sources */,
 				43A4C6D82AAA59FE00742BEA /* UIColor.swift in Sources */,
 				43A193EB2AAE377F00B30CDB /* LessonAudienceViewController.swift in Sources */,
 				43A4C6BE2AAA598600742BEA /* AppDelegate.swift in Sources */,
 				43186A4C2AAB24D1005DB413 /* Models.xcdatamodeld in Sources */,
+				43158D352AB05E6D0020A5B4 /* AddNewLessonDateViewController.swift in Sources */,
 				43186A4E2AAB2580005DB413 /* Persistent.swift in Sources */,
 				436F5AFA2AAB979300060B8B /* LessonNameViewController.swift in Sources */,
 				43A4C6C02AAA598600742BEA /* SceneDelegate.swift in Sources */,

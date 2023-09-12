@@ -18,3 +18,7 @@ protocol LessonTeacherDelegate: AnyObject {
 protocol LessonAudienceDelegate: AnyObject {
     func updateLessonAudience(lessonAudienceEntity: LessonAudience?)
 }
+
+protocol LessonDateDelegate: AnyObject {
+    func updateLessonDate(lessonDateEntity: LessonDate?)
+}

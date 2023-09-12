@@ -88,6 +88,12 @@ extension NewLessonViewController: LessonAudienceDelegate {
             return
         }
         
-        self.lessonAudienceCell.textLabel?.text = "№ \(entity.number), этаж: \(entity.floor)"
+        var text = "№ \(entity.number), этаж: \(entity.floor)"
+        
+        if let frame = lessonAudienceEntity?.frame, frame != 0 {
+            text.append(", корпус: \(frame)")
+        }
+            
+        self.lessonAudienceCell.textLabel?.text = text
     }
 }

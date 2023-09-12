@@ -129,6 +129,37 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Дата" id="zia-sQ-6kg">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="AyH-av-t5D" imageView="n1h-iH-Yd1" rowHeight="50" style="IBUITableViewCellStyleDefault" id="qGj-Q2-Y4v">
+                                        <rect key="frame" x="20" y="244" width="374" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qGj-Q2-Y4v" id="w4R-Cm-pvY">
+                                            <rect key="frame" x="0.0" y="0.0" width="343.5" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Начало и конец" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AyH-av-t5D">
+                                                    <rect key="frame" x="60.25" y="0.0" width="275.25" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n1h-iH-Yd1">
+                                                    <rect key="frame" x="18.75" y="13" width="26.5" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <imageReference key="image" image="calendar" catalog="system" symbolScale="large"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <connections>
+                                            <segue destination="lvF-PB-XZy" kind="show" trigger="accessoryAction" id="2oV-zn-PFp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="WN3-db-iCX" id="R3H-ck-u3d"/>
@@ -154,6 +185,103 @@
             </objects>
             <point key="canvasLocation" x="2824.6376811594205" y="2.0089285714285712"/>
         </scene>
+        <!--Дата и Время-->
+        <scene sceneID="Vea-An-jeu">
+            <objects>
+                <tableViewController id="lvF-PB-XZy" customClass="LessonDateViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="X9C-7G-lsr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="Background"/>
+                        <connections>
+                            <outlet property="dataSource" destination="lvF-PB-XZy" id="A8u-O7-isN"/>
+                            <outlet property="delegate" destination="lvF-PB-XZy" id="HSg-1Y-lg5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Дата и Время" id="XZn-9V-Dx3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="8hu-Z6-7r1">
+                            <color key="tintColor" name="AccentColor"/>
+                            <connections>
+                                <action selector="addDate:" destination="lvF-PB-XZy" id="JPf-BF-53F"/>
+                                <segue destination="8Dh-ke-pI1" kind="show" identifier="addNewLessonDateSegue" id="BMp-Sy-R3V"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="McR-SB-XNL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3699" y="396"/>
+        </scene>
+        <!--Новая Дата-->
+        <scene sceneID="d1j-QZ-Fpd">
+            <objects>
+                <tableViewController id="8Dh-ke-pI1" customClass="AddNewLessonDateViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="B7J-ni-ezH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="Background"/>
+                        <sections>
+                            <tableViewSection id="lsu-u4-0fJ">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hkH-fV-aKc">
+                                        <rect key="frame" x="20" y="18" width="374" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hkH-fV-aKc" id="zMN-vO-yDu">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="QmQ-V9-XR2">
+                                                    <rect key="frame" x="83" y="0.0" width="291" height="44"/>
+                                                    <color key="tintColor" name="AccentColor"/>
+                                                </datePicker>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Начало" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYA-Lk-P5M">
+                                                    <rect key="frame" x="20" y="11" width="62.5" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="QmQ-V9-XR2" secondAttribute="bottom" id="8wh-Ig-lSi"/>
+                                                <constraint firstItem="fYA-Lk-P5M" firstAttribute="top" secondItem="zMN-vO-yDu" secondAttribute="topMargin" id="P4F-n0-yWG"/>
+                                                <constraint firstItem="QmQ-V9-XR2" firstAttribute="top" secondItem="zMN-vO-yDu" secondAttribute="top" id="f2N-kd-z5s"/>
+                                                <constraint firstItem="fYA-Lk-P5M" firstAttribute="leading" secondItem="zMN-vO-yDu" secondAttribute="leadingMargin" id="fjM-5Z-dp2"/>
+                                                <constraint firstAttribute="trailing" secondItem="QmQ-V9-XR2" secondAttribute="trailing" id="khj-Hw-qeS"/>
+                                                <constraint firstItem="QmQ-V9-XR2" firstAttribute="leading" secondItem="fYA-Lk-P5M" secondAttribute="trailing" id="uzD-gV-eUD"/>
+                                                <constraint firstItem="fYA-Lk-P5M" firstAttribute="centerY" secondItem="zMN-vO-yDu" secondAttribute="centerY" id="wsK-kd-tyr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="4AP-CV-ra3">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="0dP-Iy-mGd">
+                                        <rect key="frame" x="20" y="98" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0dP-Iy-mGd" id="fF5-Xj-bF8">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="8Dh-ke-pI1" id="whn-jI-nmN"/>
+                            <outlet property="delegate" destination="8Dh-ke-pI1" id="Tm1-hj-0Dw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Новая Дата" id="b8I-tW-FMT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="OcZ-7f-9Y3">
+                            <color key="tintColor" name="AccentColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eFg-Eh-FD9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4590" y="396"/>
+        </scene>
         <!--Преподаватель-->
         <scene sceneID="bUi-iw-8yR">
             <objects>
@@ -178,7 +306,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L4C-a2-JER" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4506" y="2"/>
+            <point key="canvasLocation" x="4591" y="-482"/>
         </scene>
         <!--Название-->
         <scene sceneID="yEm-wm-1RV">
@@ -266,10 +394,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4U-Q0-aJ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3699" y="520"/>
+            <point key="canvasLocation" x="5480" y="-482"/>
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="door.left.hand.open" catalog="system" width="108" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus" catalog="system" width="128" height="113"/>

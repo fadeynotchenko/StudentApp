@@ -55,7 +55,6 @@ class LessonNameViewController: UITableViewController {
 
 //MARK: Table VC
 extension LessonNameViewController {
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.names?.count ?? 0
     }
