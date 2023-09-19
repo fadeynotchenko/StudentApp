@@ -13,11 +13,15 @@ class NewLessonViewController: UITableViewController {
     private var lessonTeacherEntity: LessonTeacher?
     private var lessonAudienceEntity: LessonAudience?
     private var lessonTimeEntity: LessonTime?
+    private var lessonDays: [Days] = []
+    private var lessonRepeatEntity: LessonRepeat?
 
     @IBOutlet weak var lessonNameCell: UITableViewCell!
     @IBOutlet weak var lessonTeacherCell: UITableViewCell!
     @IBOutlet weak var lessonAudienceCell: UITableViewCell!
     @IBOutlet weak var lessonTimeCell: UITableViewCell!
+    @IBOutlet weak var lessonDaysCell: UITableViewCell!
+    @IBOutlet weak var lessonRepeatCell: UITableViewCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +50,16 @@ class NewLessonViewController: UITableViewController {
         if let vc = segue.destination as? LessonTimeViewController, segue.identifier == SegueIdentifiers.LESSON_TIME {
             vc.delegate = self
             vc.currentLessonTime = self.lessonTimeEntity
+        }
+        
+        if let vc = segue.destination as? LessonDaysViewController, segue.identifier == SegueIdentifiers.LESSON_DAYS {
+            vc.delegate = self
+            vc.selectedDays = self.lessonDays
+        }
+        
+        if let vc = segue.destination as? LessonRepeatDaysViewController, segue.identifier == SegueIdentifiers.LESSON_REPEATS {
+            vc.delegate = self
+            vc.currentRepeat = self.lessonRepeatEntity
         }
     }
     
@@ -117,5 +131,41 @@ extension NewLessonViewController: LessonTimeDelegate {
         }
         
         self.lessonTimeCell.textLabel?.text = "\(lessonTimeEntity.start!.stringTime()) - \(lessonTimeEntity.end!.stringTime())"
+    }
+}
+
+
+//MARK: Lesson Days Delegate
+extension NewLessonViewController: LessonDaysDelegate {
+    func updateLessonDays(lessonDays: [Days]) {
+        self.lessonDays = lessonDays
+        
+        let lessonDaysStringArray = lessonDays.map({ $0.rawValue })
+        
+        if lessonDaysStringArray.count == 0 {
+            self.lessonDaysCell.textLabel?.text = "Дни недели"
+            
+            return
+        }
+        
+        self.lessonDaysCell.textLabel?.text = lessonDaysStringArray.joined(separator: ", ")
+    }
+}
+
+
+//MARK: Lesson Repeat Delegate
+extension NewLessonViewController: LessonRepeatDelegate {
+    func updateLessonRepeat(lessonRepeatEntity: LessonRepeat?) {
+        self.lessonRepeatEntity = lessonRepeatEntity
+        
+        guard let lessonRepeatEntity = lessonRepeatEntity else {
+            self.lessonRepeatCell.detailTextLabel?.text = "Нет"
+            
+            return
+        }
+        
+        let repeatItem = Repeats.allCases[Int(lessonRepeatEntity.repeatIndex)]
+        
+        self.lessonRepeatCell.detailTextLabel?.text = repeatItem.rawValue
     }
 }

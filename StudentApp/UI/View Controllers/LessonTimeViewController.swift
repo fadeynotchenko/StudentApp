@@ -66,7 +66,7 @@ extension LessonTimeViewController {
             PersistenceController.shared.context.delete(entity)
             PersistenceController.shared.saveContext()
             
-            self.tableView.reloadData()
+            self.tableView.reloadDataWithAnimation()
             
             success(true)
         }

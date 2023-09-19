@@ -53,19 +53,19 @@ class LessonAudienceViewController: UITableViewController {
             
             if let number = numberTF.text, let floor = floorTF.text {
                 //Add new LessonAudience Entity
-                let lessonAudienceEntiry = LessonAudience(context: PersistenceController.shared.context)
+                let lessonAudienceEntity = LessonAudience(context: PersistenceController.shared.context)
                 
-                lessonAudienceEntiry.number = Int16(number) ?? 0
-                lessonAudienceEntiry.floor = Int16(floor) ?? 0
+                lessonAudienceEntity.number = Int16(number) ?? 0
+                lessonAudienceEntity.floor = Int16(floor) ?? 0
                 
                 if let frame = frameTF.text, frame != "" {
-                    lessonAudienceEntiry.frame = Int16(frame) ?? 0
+                    lessonAudienceEntity.frame = Int16(frame) ?? 0
                 }
                 
                 PersistenceController.shared.saveContext()
                 
                 //update UI
-                self.audience?.append(lessonAudienceEntiry)
+                self.audience?.append(lessonAudienceEntity)
                 
                 self.tableView.reloadData()
             }
@@ -124,7 +124,7 @@ extension LessonAudienceViewController {
             //update UI
             self.audience = self.audience?.filter { $0 != entity }
             
-            self.tableView.reloadData()
+            self.tableView.reloadDataWithAnimation()
             
             PersistenceController.shared.context.delete(entity)
             PersistenceController.shared.saveContext()

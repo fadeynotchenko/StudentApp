@@ -158,6 +158,66 @@
                                             <segue destination="lvF-PB-XZy" kind="show" identifier="selectLessonTimeSegue" id="lkR-0h-Pkm"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="8qR-Yw-fgZ" imageView="vcO-06-Stg" rowHeight="50" style="IBUITableViewCellStyleDefault" id="BBt-N9-zAP">
+                                        <rect key="frame" x="20" y="294" width="374" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BBt-N9-zAP" id="Kgj-QB-Z0i">
+                                            <rect key="frame" x="0.0" y="0.0" width="343.5" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Дни недели" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8qR-Yw-fgZ">
+                                                    <rect key="frame" x="60.25" y="0.0" width="275.25" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vcO-06-Stg">
+                                                    <rect key="frame" x="18.75" y="13" width="26.5" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <imageReference key="image" image="calendar" catalog="system" symbolScale="large"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <connections>
+                                            <segue destination="ho1-4H-jwi" kind="show" identifier="addLessonDaysSegue" id="soK-eo-qFG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="aBR-S5-LNi" detailTextLabel="NBX-SG-h4A" imageView="o9k-w2-I3A" rowHeight="50" style="IBUITableViewCellStyleValue1" id="BhT-qS-5g8">
+                                        <rect key="frame" x="20" y="344" width="374" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BhT-qS-5g8" id="uqY-rl-h5o">
+                                            <rect key="frame" x="0.0" y="0.0" width="343.5" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Повтор" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aBR-S5-LNi">
+                                                    <rect key="frame" x="59" y="15" width="61.5" height="21.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Нет" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NBX-SG-h4A">
+                                                    <rect key="frame" x="304.5" y="15" width="31" height="21.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" systemColor="systemGray2Color"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="repeat" catalog="system" id="o9k-w2-I3A">
+                                                    <rect key="frame" x="21" y="16.5" width="22" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <connections>
+                                            <segue destination="Oaf-zl-ymx" kind="show" identifier="addLessonRepeatsSegue" id="9Rz-2I-I4h"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -177,7 +237,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="lessonAudienceCell" destination="WOD-1G-hTm" id="toZ-vr-2Kp"/>
+                        <outlet property="lessonDaysCell" destination="BBt-N9-zAP" id="NRB-Hx-biv"/>
                         <outlet property="lessonNameCell" destination="Ox2-uj-Wit" id="5wB-YT-evO"/>
+                        <outlet property="lessonRepeatCell" destination="BhT-qS-5g8" id="EGg-EB-2pg"/>
                         <outlet property="lessonTeacherCell" destination="jEd-o0-mOQ" id="sg8-so-vgV"/>
                         <outlet property="lessonTimeCell" destination="qGj-Q2-Y4v" id="zAQ-Pa-osc"/>
                     </connections>
@@ -185,6 +247,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="McV-np-ijD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2824.6376811594205" y="2.0089285714285712"/>
+        </scene>
+        <!--Дни Недели-->
+        <scene sceneID="bS7-OU-ZcF">
+            <objects>
+                <tableViewController id="ho1-4H-jwi" customClass="LessonDaysViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="YWf-9U-D38">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="Background"/>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="ho1-4H-jwi" id="wtk-ob-VJf"/>
+                            <outlet property="delegate" destination="ho1-4H-jwi" id="TLh-5f-1kv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Дни Недели" id="pfF-gH-y27"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NhF-QW-MFF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4590" y="396"/>
+        </scene>
+        <!--Повтор-->
+        <scene sceneID="JQR-Df-wdB">
+            <objects>
+                <tableViewController id="Oaf-zl-ymx" customClass="LessonRepeatDaysViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="R6l-Gh-UcC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="Background"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Oaf-zl-ymx" id="HMW-Lf-KIx"/>
+                            <outlet property="delegate" destination="Oaf-zl-ymx" id="y8X-yJ-OZD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Повтор" id="px2-KQ-VTw"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wuF-6v-3Cw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5480" y="396"/>
         </scene>
         <!--Время Занятия-->
         <scene sceneID="Vea-An-jeu">
@@ -305,7 +406,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFg-Eh-FD9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4590" y="396"/>
+            <point key="canvasLocation" x="3699" y="1148"/>
         </scene>
         <!--Преподаватель-->
         <scene sceneID="bUi-iw-8yR">
@@ -423,11 +524,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="clock" catalog="system" width="128" height="123"/>
         <image name="door.left.hand.open" catalog="system" width="108" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="80"/>
+        <image name="repeat" catalog="system" width="128" height="98"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -436,6 +539,9 @@
         </namedColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

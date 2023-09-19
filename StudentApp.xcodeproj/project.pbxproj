@@ -16,6 +16,7 @@
 		43186A4E2AAB2580005DB413 /* Persistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43186A4D2AAB2580005DB413 /* Persistent.swift */; };
 		436F5AF82AAB699900060B8B /* NewLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436F5AF72AAB699900060B8B /* NewLessonViewController.swift */; };
 		436F5AFA2AAB979300060B8B /* LessonNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436F5AF92AAB979300060B8B /* LessonNameViewController.swift */; };
+		437EDC6E2AB1B02E007F2A10 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437EDC6D2AB1B02E007F2A10 /* UITableView.swift */; };
 		43A193E92AAC917100B30CDB /* LessonTeacherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A193E82AAC917100B30CDB /* LessonTeacherViewController.swift */; };
 		43A193EB2AAE377F00B30CDB /* LessonAudienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A193EA2AAE377F00B30CDB /* LessonAudienceViewController.swift */; };
 		43A4C6BE2AAA598600742BEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A4C6BD2AAA598600742BEA /* AppDelegate.swift */; };
@@ -25,6 +26,10 @@
 		43A4C6C72AAA598700742BEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43A4C6C62AAA598700742BEA /* Assets.xcassets */; };
 		43A4C6CA2AAA598700742BEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43A4C6C82AAA598700742BEA /* LaunchScreen.storyboard */; };
 		43A4C6D82AAA59FE00742BEA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A4C6D72AAA59FE00742BEA /* UIColor.swift */; };
+		43A937C62AB355800018FBC5 /* LessonRepeatDaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A937C52AB355800018FBC5 /* LessonRepeatDaysViewController.swift */; };
+		43A937C82AB355B50018FBC5 /* Repeats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A937C72AB355B50018FBC5 /* Repeats.swift */; };
+		43BE5CF02AB1C015007C75BA /* Days.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE5CEF2AB1C015007C75BA /* Days.swift */; };
+		43BE5CF22AB1C29E007C75BA /* LessonDaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE5CF12AB1C29E007C75BA /* LessonDaysViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,7 @@
 		43186A4D2AAB2580005DB413 /* Persistent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistent.swift; sourceTree = "<group>"; };
 		436F5AF72AAB699900060B8B /* NewLessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLessonViewController.swift; sourceTree = "<group>"; };
 		436F5AF92AAB979300060B8B /* LessonNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonNameViewController.swift; sourceTree = "<group>"; };
+		437EDC6D2AB1B02E007F2A10 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		43A193E82AAC917100B30CDB /* LessonTeacherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTeacherViewController.swift; sourceTree = "<group>"; };
 		43A193EA2AAE377F00B30CDB /* LessonAudienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonAudienceViewController.swift; sourceTree = "<group>"; };
 		43A4C6BA2AAA598600742BEA /* StudentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +54,10 @@
 		43A4C6C92AAA598700742BEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43A4C6CB2AAA598700742BEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43A4C6D72AAA59FE00742BEA /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		43A937C52AB355800018FBC5 /* LessonRepeatDaysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonRepeatDaysViewController.swift; sourceTree = "<group>"; };
+		43A937C72AB355B50018FBC5 /* Repeats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repeats.swift; sourceTree = "<group>"; };
+		43BE5CEF2AB1C015007C75BA /* Days.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Days.swift; sourceTree = "<group>"; };
+		43BE5CF12AB1C29E007C75BA /* LessonDaysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDaysViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +117,7 @@
 			children = (
 				43A4C6BD2AAA598600742BEA /* AppDelegate.swift */,
 				43A4C6BF2AAA598600742BEA /* SceneDelegate.swift */,
+				43BE5CEE2AB1C007007C75BA /* Enums */,
 				43158D382AB0750B0020A5B4 /* Utills */,
 				43186A492AAB24B3005DB413 /* Core Data */,
 				43186A462AAB089B005DB413 /* Protocols */,
@@ -138,6 +149,8 @@
 				43A193EA2AAE377F00B30CDB /* LessonAudienceViewController.swift */,
 				43158D322AB059800020A5B4 /* LessonTimeViewController.swift */,
 				43158D342AB05E6D0020A5B4 /* AddNewLessonTimeViewController.swift */,
+				43BE5CF12AB1C29E007C75BA /* LessonDaysViewController.swift */,
+				43A937C52AB355800018FBC5 /* LessonRepeatDaysViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -147,8 +160,18 @@
 			children = (
 				43A4C6D72AAA59FE00742BEA /* UIColor.swift */,
 				43158D362AB0713D0020A5B4 /* Date.swift */,
+				437EDC6D2AB1B02E007F2A10 /* UITableView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		43BE5CEE2AB1C007007C75BA /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				43BE5CEF2AB1C015007C75BA /* Days.swift */,
+				43A937C72AB355B50018FBC5 /* Repeats.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,15 +251,20 @@
 				43158D332AB059800020A5B4 /* LessonTimeViewController.swift in Sources */,
 				43A4C6D82AAA59FE00742BEA /* UIColor.swift in Sources */,
 				43A193EB2AAE377F00B30CDB /* LessonAudienceViewController.swift in Sources */,
+				43A937C62AB355800018FBC5 /* LessonRepeatDaysViewController.swift in Sources */,
 				43A4C6BE2AAA598600742BEA /* AppDelegate.swift in Sources */,
 				43186A4C2AAB24D1005DB413 /* Models.xcdatamodeld in Sources */,
 				43158D352AB05E6D0020A5B4 /* AddNewLessonTimeViewController.swift in Sources */,
 				43186A4E2AAB2580005DB413 /* Persistent.swift in Sources */,
 				43158D372AB0713D0020A5B4 /* Date.swift in Sources */,
+				43A937C82AB355B50018FBC5 /* Repeats.swift in Sources */,
 				436F5AFA2AAB979300060B8B /* LessonNameViewController.swift in Sources */,
 				43A4C6C02AAA598600742BEA /* SceneDelegate.swift in Sources */,
+				437EDC6E2AB1B02E007F2A10 /* UITableView.swift in Sources */,
 				43A193E92AAC917100B30CDB /* LessonTeacherViewController.swift in Sources */,
+				43BE5CF02AB1C015007C75BA /* Days.swift in Sources */,
 				43186A482AAB08AE005DB413 /* Delegates.swift in Sources */,
+				43BE5CF22AB1C29E007C75BA /* LessonDaysViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

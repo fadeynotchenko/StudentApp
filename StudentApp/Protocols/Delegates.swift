@@ -26,3 +26,11 @@ protocol LessonTimeDelegate: AnyObject {
 protocol AddLessonTimeDelegate: AnyObject {
     func add(new lessonTimeEntity: LessonTime)
 }
+
+protocol LessonDaysDelegate: AnyObject {
+    func updateLessonDays(lessonDays: [Days])
+}
+
+protocol LessonRepeatDelegate: AnyObject {
+    func updateLessonRepeat(lessonRepeatEntity: LessonRepeat?)
+}

@@ -8,6 +8,10 @@
     <entity name="LessonName" representedClassName="LessonName" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="LessonRepeat" representedClassName="LessonRepeat" syncable="YES" codeGenerationType="class">
+        <attribute name="repeatIndex" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="weakTypeIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
     <entity name="LessonTeacher" representedClassName="LessonTeacher" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>

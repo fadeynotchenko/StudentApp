@@ -13,4 +13,6 @@ final class SegueIdentifiers {
     static let LESSON_AUDIENCE = "selectLessonAudienceSegue"
     static let LESSON_TIME = "selectLessonTimeSegue"
     static let LESSON_ADD_TIME = "addLessonTimeSegue"
+    static let LESSON_DAYS = "addLessonDaysSegue"
+    static let LESSON_REPEATS = "addLessonRepeatsSegue"
 }

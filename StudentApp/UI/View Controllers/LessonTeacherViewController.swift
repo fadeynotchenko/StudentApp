@@ -93,7 +93,7 @@ extension LessonTeacherViewController {
             //update UI
             self.teachers = self.teachers?.filter { $0 != entity }
             
-            self.tableView.reloadData()
+            self.tableView.reloadDataWithAnimation()
             
             PersistenceController.shared.context.delete(entity)
             PersistenceController.shared.saveContext()
